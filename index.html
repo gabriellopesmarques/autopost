@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>AutoPost</title>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
+<body>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>AutoPost</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column column-50">
+        <form action="sendmail.php" method="post">
+          <div class="row">
+            <div class="column column-50">
+              <label for="nome">Name: </label>
+              <input type="text" name="name" id="name" autofocus="" required="">
+            </div>
+            <div class="column column-50">
+              <label for="phone">Phone: </label>
+              <input type="text" name="phone" id="phone" required="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <label for="message">Message:</label>
+              <textarea name="message" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male" id="male"> Male</label>
+                <label><input type="radio" name="gender" value="female" id="female"> Female</label>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <label><input type="checkbox" id="newsletter" name="newsletter"> Newsletter</label>
+            </div>
+          </div>
+          <button class="button-primary" type="submit">Send</button>
+        </form>
+      </div>
+      <div class="column column-50">
+      	<h2>Results</h2>
+        <span><!-- Show Result Here --></span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="autopost.js" async=""></script>
+</body>
+</html>
